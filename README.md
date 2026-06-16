@@ -12,7 +12,7 @@ Aplicación web que utiliza Inteligencia Artificial para clasificar residuos y m
 
 ## Guía de separación de residuos
 
-![Guía](screenshots/guia.png)
+![Guía](screenshots/Guia.png)
 
 ## Quiz interactivo
 

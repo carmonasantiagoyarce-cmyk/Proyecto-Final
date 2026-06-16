@@ -1,0 +1,17 @@
+Flask==3.0.3
+tensorflow==2.15.0
+numpy==1.26.4
+Pillow==10.3.0
+pyttsx3==2.90
+
+pip install Flask==3.0.3 
+tensorflow==2.15.0 
+numpy==1.26.4 
+Pillow==10.3.0 
+pyttsx3==2.90
+
+Activar venv:
+
+source venv/Scripts/activate
+o
+venv\Scripts\activate.bat

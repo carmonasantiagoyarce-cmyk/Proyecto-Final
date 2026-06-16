@@ -1,0 +1,40 @@
+# 📋 Lista de Control de Pruebas (Test Checklist) - EcoGuardian
+
+Este documento contiene el plan de pruebas estructurado para garantizar el correcto funcionamiento de la aplicación web de clasificación de residuos asistida por IA.
+
+---
+
+## 🔍 Categoría 1: Funcionalidad del Sistema (Prioridad: ALTA)
+*Objetivo: Verificar que la lógica del backend en Flask y el modelo de IA respondan correctamente a las acciones del usuario.*
+
+* **Resultado esperado al subir un residuo:** El sistema procesa la imagen, el modelo realiza la predicción matemática y la interfaz muestra el material correcto junto a su caneca correspondiente según la ley colombiana.
+  - [ ] **Prueba de clasificación de reciclables:** Subir imágenes de plástico, vidrio y cartón; confirmar que el sistema asigne la **Caneca Blanca**.
+  - [ ] **Prueba de clasificación de orgánicos:** Subir imágenes de residuos de comida; confirmar que el sistema asigne la **Caneca Verde**.
+  - [ ] **Prueba de clasificación de no aprovechables:** Subir imágenes de servilletas sucias o residuos sanitarios; confirmar que el sistema asigne la **Caneca Negra**.
+
+* **Resultado esperado en el control de errores:** El servidor no se cae ante archivos no válidos.
+  - [ ] **Validación de formato de archivo:** Subir un archivo de texto (.txt) o PDF en el formulario de la IA y verificar que la app redirija a la vista de error (`error.html`) sin romper el backend.
+
+* **Resultado esperado en el cuestionario (Quiz):** La puntuación calcula los conocimientos del usuario con precisión.
+  - [ ] **Lógica del contador del Quiz:** Responder las 10 preguntas del formulario interactivo y verificar que la vista `resultado_quiz.html` sume exactamente 1 punto por cada respuesta correcta (Mínimo: 0, Máximo: 10).
+
+---
+
+## 🎨 Categoría 2: Interfaz de Usuario y Enrutamiento (Prioridad: MEDIA)
+*Objetivo: Garantizar una navegación fluida entre las diferentes secciones educativas de la plataforma.*
+
+* **Resultado esperado:** Los botones del menú redirigen de forma instantánea a las plantillas HTML correctas.
+  - [ ] **Navegación del menú (final_q):** Probar el botón de "Inicio" y verificar la carga de `index.html`.
+  - [ ] **Navegación de la guía:** Probar el botón de "Guía" y verificar la carga de `guia.html`.
+  - [ ] **Navegación del cuestionario:** Probar el botón de "Quiz" y verificar la carga de `quest.html`.
+  - [ ] **Diseño Responsivo:** Abrir la aplicación desde diferentes tamaños de pantalla (o simulador del navegador) y validar que el CSS mantenga los elementos alineados.
+
+---
+
+## 📦 Categoría 3: Rendimiento y Despliegue (Prioridad: ALTA)
+*Objetivo: Asegurar que el entorno de desarrollo sea limpio y fácil de replicar por el tutor evaluador.*
+
+* **Resultado esperado:** El proyecto puede ejecutarse en cualquier computadora sin dependencias faltantes ni archivos basura en la nube.
+  - [ ] **Aislamiento del repositorio (Git):** Validar que la carpeta pesada `venv/` no se haya subido a GitHub (verificando la correcta ejecución del archivo `.gitignore`).
+  - [ ] **Instalación de dependencias:** Ejecutar `pip install -r requirements.txt` en una terminal limpia y confirmar que todas las librerías (Flask, TensorFlow, NumPy, Pillow, pyttsx3) se instalen sin conflictos de versiones.
+  - [ ] **Arranque del servidor local:** Ejecutar `python app.py` y verificar que la consola asigne correctamente el puerto local (`http://127.0.0.1:5000`) para iniciar las pruebas en vivo.

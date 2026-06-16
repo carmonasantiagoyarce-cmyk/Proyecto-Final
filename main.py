@@ -43,7 +43,7 @@ def final():
         caneca = "⚪ Caneca Blanca (Reciclables)"
         nombre_simplificado = "blanca"
 
-    elif tipo == "plastico" or tipo == "metal" or tipo == "vidrio":
+    elif tipo == "plastico" or tipo == "metal" or tipo == "vidrio" or tipo == "carton":
         caneca = "⚪ Caneca Blanca (Reciclables)"
         nombre_simplificado = "blanca"
 

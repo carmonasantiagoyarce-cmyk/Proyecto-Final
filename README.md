@@ -4,7 +4,7 @@ Aplicación web que utiliza Inteligencia Artificial para clasificar residuos y m
 
 ## Página principal
 
-![Inicio](screenshots/inicio.png)
+![Inicio](screenshots/Menu.png)
 
 ## Clasificación con IA
 

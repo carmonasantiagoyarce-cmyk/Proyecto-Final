@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <title>EcoGuardian 🌱</title>
+</head>
+<body>
+    <header id="head">
+          <h1>EcoGuardian 🌱</h1>
+         <h2>Identificador inteligente de residuos.</h2>
+    </header>
+     <p id="primer_p">Nuestra IA clasificará la imagen de tu residuo y te indicará en qué caneca debe depositarse.</p>
+    <section id="form_content">
+         <div id="info_content">
+            <form action="/final" method="post" enctype="multipart/form-data">
+                <h1>Ingresa los siguientes datos para que nuestra IA lo clasifique</h1>
+                <br>
+            <div class="targeta">
+                <label  for="nombre">✍️ El nombre de tu basura</label>
+                <input id="nombre" name="nombre" type="text" placeholder="¿Cual es tu basura?" required>
+            </div>
+            <div class="targeta">
+                <label  for="archivo">📷 Sube una imagen de tu residuo</label>
+                <input id="archivo" name="archivo" type="file" required>
+            </div>
+
+            <button class="submit_button" type="submit">Clasificar</button>
+            </form>
+            
+         </div>
+    </section>
+    <br>
+    <section id="form_content">
+        <h1>Recursos extra</h1>
+        <ul>
+            <form action="/final_q" method="post">
+        <li><button name="guia" value="2" class="submit_button" type="submit">Guia de clasificacion</button></li>
+        <li><button name="quest" value="3" class="submit_button" type="submit">Quest de clasificacion</button></li>
+    </form>
+        </ul>
+        <br>
+    </section>
+    <footer id="foot">
+        <h1 class="foot_h1" > Proyecto desarrollado para Kodland ♻️</h1>
+    <div id="foot_isquierda">
+    <p>♻️ EcoClasificador</p>
+    <p>Ayudando a identificar residuos y su caneca correspondiente.</p>
+    <p>Desarrollado por Santiago Carmona.</p>
+    </div>
+    <div id="foot_centro_abajo">
+        <p>Versión 1.0</p>
+        <p>Creado con HTML, CSS, Python e IA.</p>
+    </div>
+    </footer>
+    </body>
+</html>

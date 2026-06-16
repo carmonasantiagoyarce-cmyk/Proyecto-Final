@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <title>Quest de clasificacion</title>
+</head>
+<body>
+      <header id="head">
+          <h1>Quest de clasificacion 🗑️🪴</h1>
+         <h2>Demuestra lo que sabes</h2>
+    </header>
+    <section id="form_content">
+<form action="/quiz" method="post">
+    <div class="targeta">
+        <h2>1. ¿Qué color de caneca se utiliza para residuos reciclables?</h2>
+    <select name="p1" required>
+        <option value="">Selecciona una opción</option>
+        <option value="verde">🟢 Verde</option>
+        <option value="blanca">⚪ Blanca</option>
+        <option value="negra">⚫ Negra</option>
+    </select>
+
+    <h2>2. ¿Dónde deben depositarse las cáscaras de frutas?</h2>
+    <select name="p2" required>
+        <option value="">Selecciona una opción</option>
+        <option value="verde">🟢 Verde</option>
+        <option value="blanca">⚪ Blanca</option>
+        <option value="negra">⚫ Negra</option>
+    </select>
+
+    <h2>3. ¿Cuál de estos materiales es reciclable?</h2>
+    <select name="p3" required>
+        <option value="">Selecciona una opción</option>
+        <option value="pañal">Pañal usado</option>
+        <option value="carton">Cartón</option>
+        <option value="chicle">Chicle</option>
+    </select>
+
+    <h2>4. ¿Dónde deben ir los restos de comida?</h2>
+    <select name="p4" required>
+        <option value="">Selecciona una opción</option>
+        <option value="verde">🟢 Verde</option>
+        <option value="blanca">⚪ Blanca</option>
+        <option value="negra">⚫ Negra</option>
+    </select>
+
+    <h2>5. ¿Cuál de estos residuos pertenece a la caneca negra?</h2>
+    <select name="p5" required>
+        <option value="">Selecciona una opción</option>
+        <option value="papel">Papel limpio</option>
+        <option value="servilleta">Servilleta usada</option>
+        <option value="botella">Botella plástica</option>
+    </select>
+
+    <h2>6. ¿Por qué es importante separar los residuos?</h2>
+    <select name="p6" required>
+        <option value="">Selecciona una opción</option>
+        <option value="contaminar">Para contaminar más</option>
+        <option value="reciclar">Para facilitar el reciclaje</option>
+        <option value="ninguna">No tiene importancia</option>
+    </select>
+
+    <h2>7. ¿Dónde debe depositarse una lata de aluminio limpia?</h2>
+    <select name="p7" required>
+        <option value="">Selecciona una opción</option>
+        <option value="blanca">⚪ Blanca</option>
+        <option value="verde">🟢 Verde</option>
+        <option value="negra">⚫ Negra</option>
+    </select>
+
+    <h2>8. ¿Cuál de estos residuos es orgánico?</h2>
+    <select name="p8" required>
+        <option value="">Selecciona una opción</option>
+        <option value="hojas">Hojas secas</option>
+        <option value="vidrio">Vidrio</option>
+        <option value="metal">Metal</option>
+    </select>
+
+    <h2>9. ¿Dónde debe depositarse una botella de vidrio limpia?</h2>
+    <select name="p9" required>
+        <option value="">Selecciona una opción</option>
+        <option value="blanca">⚪ Blanca</option>
+        <option value="verde">🟢 Verde</option>
+        <option value="negra">⚫ Negra</option>
+    </select>
+
+    <h2>10. ¿Qué residuos van en la caneca negra?</h2>
+    <select name="p10" required>
+        <option value="">Selecciona una opción</option>
+        <option value="reciclables">Residuos reciclables</option>
+        <option value="organicos">Residuos orgánicos</option>
+        <option value="no_aprovechables">Residuos no aprovechables</option>
+    </select>
+    </div>
+    <br><br>
+    <button class="submit_button" type="submit">
+        Enviar respuestas
+    </button>
+
+</form>
+
+    </section>
+</body>
+</html>

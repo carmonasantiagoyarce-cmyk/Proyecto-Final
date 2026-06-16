@@ -1,0 +1,7 @@
+0 Carton
+1 Metal
+2 Organico
+3 Papel
+4 Plastico
+5 Vidrio
+6 No aprobechable

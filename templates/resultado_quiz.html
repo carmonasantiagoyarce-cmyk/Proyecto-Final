@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <title>respuestas Quest </title>
+</head>
+<body>
+    <header id="head">
+        <h1>Mira tus respuestas</h1>
+        <h2>¿Que tal te fue?</h2>
+    </header>
+    <section id="form_content">
+        <h1>Respuestas : {{puntaje}}/10</h1>
+    </section>
+     <form action="/final_q" method="post">
+        <button name="inicio" value="1" class="submit_button" type="submit">Vuelve al menu principal</button>
+    </form>
+</body>
+</html>

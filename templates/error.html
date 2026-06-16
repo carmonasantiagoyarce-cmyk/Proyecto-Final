@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <title>Guia clasificacion de residuos</title>
+    <title>❌🧑‍💻 Error de carga</title>
+</head>
+<body>
+    <header id="head">
+        <h1>Tu imagen no es compatible</h1>
+        <h2>Revisa tu archivo</h2>
+    </header>
+    <section id="form_content">
+        <h1>Tu imageen nombrada como <label id="filename">{{ filename }}</label> no cumple con los requerimientos de nuestro sistema</h1>
+
+        <div class="targeta">
+            <h2>Prueba con una imagen en formato PNG, JPG, JPEG o WEBP.</h2>
+        </div>
+    <form action="/final_q" method="post">
+        <button name="inicio" value="1" class="submit_button" type="submit">Vuelve al menu principal</button>
+    </form>
+    </section>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <title>Guia clasificacion de residuos</title>
+</head>
+<body>
+    <header id="head">
+        <h1>Guia de clasificacion de residuos</h1>
+        <h2>Clasifica la basura correctamente</h2>
+        <img class="pequeña_img" src="{{ url_for('static', filename='img/negra.png') }}" alt="">
+    </header>
+    <br>
+    <section id="form_content">
+        <h1>¿Por que es importante separar?</h1>
+        <p>Cada día generamos grandes cantidades de basura. Cuando todos los residuos se mezclan, muchos materiales que podrían reciclarse terminan contaminados y deben enviarse a rellenos sanitarios.</p>
+        <br>
+        <h2>Separar correctamente los residuos permite:</h2>
+        <ul>
+            <li>♻️ Reciclar más materiales, como papel, cartón, plástico, vidrio y metal.</li>
+            <li>🌱 Aprovechar los residuos orgánicos, transformándolos en abono para las plantas.</li>
+            <li>🚛 Reducir la cantidad de basura que llega a los rellenos sanitarios.</li>
+            <li>💰 Ahorrar recursos naturales y energía, ya que fabricar productos reciclados suele requerir menos materiales y menos energía.</li>
+            <li>🐦 Disminuir la contaminación del suelo, del agua y del aire.</li>
+            <li>👨‍👩‍👧‍👦 Contribuir al cuidado del medio ambiente y a una ciudad más limpia para todos.</li>
+        </ul>
+        <h1>Por esta razón, en Colombia se utilizan tres colores de canecas para facilitar la separación de residuos:</h1>
+        <h2>A continuacion una explicacion de cada 1 y que se ingresa en ellas</h2>
+        <div class="targeta">
+            <h1>1.) ⚪ Caneca Blanca - Residuos Aprovechables</h1>
+            <img src="{{ url_for('static', filename='img/blanca.png') }}" alt="">
+            <h2>En esta caneca se depositan los residuos que pueden ser reciclados y transformados en nuevos productos. Deben estar limpios y secos para facilitar su aprovechamiento.</h2>
+            <h2 class="esempi">Ejemplos:</h2>
+            <ul>
+            <li>Papel</li>
+            <li>Cartón</li>
+            <li>Periódicos</li>
+            <li>Revistas</li>
+            <li>Cuadernos</li>
+            <li>Botellas plásticas</li>
+            <li>Envases plásticos</li>
+            <li>Bolsas plásticas limpias</li>
+            <li>Latas de aluminio</li>
+            <li>Latas de acero</li>
+            <li>Frascos de vidrio</li>
+            <li>Botellas de vidrio</li>
+            </ul>
+
+            <h2 class="esempi" >Recomendaciones:</h2>
+            <ul>
+            <li>Vacía y limpia los envases antes de desecharlos.</li>
+            <li>Mantén el papel y el cartón secos.</li>
+            <li>Aplasta botellas y cajas para ahorrar espacio.</li>
+            </ul>
+            <br>
+             <h1>2.) Caneca Verde - Residuos Orgánicos</h1>
+            <img src="{{ url_for('static', filename='img/verde.png') }}" alt="">
+            <h2>En esta caneca se depositan los residuos de origen natural que pueden descomponerse y convertirse en compost o abono.</h2>
+            <h2 class="esempi">Ejemplos:</h2>
+            <ul>
+            <li>Cáscaras de frutas</li>
+            <li>Cáscaras de verduras</li>
+            <li>Restos de comida</li>
+            <li>Hojas secas</li>
+            <li>Flores marchitas</li>
+            <li>Residuos de jardinería</li>
+            <li>Césped cortado</li>
+            <li>Restos de poda</li>
+            </ul>
+
+        <h2 class="esempi">Recomendaciones:</h2>
+        <ul>
+            <li>No mezcles estos residuos con plástico, vidrio o metal.</li>
+            <li>Si es posible, utilízalos para hacer compostaje.</li>
+            <li>Retira cualquier empaque antes de desechar los residuos orgánicos.</li>
+        </ul>
+              <h1>3.) ⚫ Caneca Negra - Residuos No Aprovechables</h1>
+            <img src="{{ url_for('static', filename='img/negra.png') }}" alt="">
+            <h2>En esta caneca se depositan los residuos que no pueden reciclarse ni convertirse en abono.</h2>
+            <h2 class="esempi">Ejemplos:</h2>
+            <ul>
+        <li>Papel higiénico usado</li>
+        <li>Servilletas usadas</li>
+        <li>Pañales desechables</li>
+        <li>Tapabocas</li>
+        <li>Colillas de cigarrillo</li>
+        <li>Esponjas usadas</li>
+        <li>Empaques contaminados con grasa o comida</li>
+        <li>Barrido de pisos</li>
+        <li>Chicles</li>
+        </ul>
+
+<h2 class="esempi">Recomendaciones:</h2>
+<ul>
+    <li>Deposita aquí únicamente los residuos que no puedan reciclarse.</li>
+    <li>No mezcles residuos reciclables con estos materiales.</li>
+    <li>Utiliza esta caneca como última opción después de clasificar los demás residuos.</li>
+</ul>
+    <h1>!Perfecto¡ Ya estas listo para clasificar residuos 🗑️</h1>
+        </div>
+    <form action="/final_q" method="post">
+        <button name="inicio" value="1" class="submit_button" type="submit">Vuelve al menu principal</button>
+        <h2>Pon a prueba tus conocimientos, completando este quest sobre clasificacion</h2>
+         <button name="quest" value="3" class="submit_button" type="submit">Quest de clasificacion</button>
+    </form>
+    </section>
+</body>
+</html>

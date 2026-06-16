@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resultados</title>
+        <header id="head">
+          <h1>Veamos lo que la IA dice 🌱</h1>
+         <h2>A continuacion la informacion procesada</h2>
+    </header>
+    {% if error %}
+    <h2>{{ error }}</h2>
+{% endif %}
+    <section id="form_content">
+         <div class="targeta">
+                <h1>Resultados finales :</h1>
+                <br>
+                <h2>Nombre : {{nombre}}</h2>
+                <br>
+                <h2>Tipo de residuo : {{resultado}}</h2>
+                <br>
+                <h2>Caneca final : {{caneca}}</h2>
+   {% if classed == "verde" %}
+    <img id="image" src="{{ url_for('static', filename='img/verde.png') }}">
+
+   {% elif classed == "blanca" %}
+    <img id="image" src="{{ url_for('static', filename='img/blanca.png') }}">
+   {% elif classed  == "negra" %}
+    <img id="image" src="{{ url_for('static', filename='img/negra.png') }}">
+    {% else %}
+        <h2>♻️ Image not found</h2>
+    {% endif %}
+    </div>
+    <form action="/final_q" method="post">
+        <button name="inicio" value="1" class="submit_button" type="submit">Vuelve al menu principal</button>
+        <h2>¿Quieres clasificar basura sin ayuda? Sigue esta guia en la que aprenderas a clasificar basura, con un quest totalmente gratis,rapido y sencillo, No solo aprendes,
+            ayudas al planeta. 🌍🏵️🪻
+        </h2>
+         <button name="guia" value="2" class="submit_button" type="submit">Guia de clasificacion</button>
+    </form>
+    </section>
+</head>
+<body>
+    
+</body>
+</html>

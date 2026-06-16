@@ -16,4 +16,4 @@ Aplicación web que utiliza Inteligencia Artificial para clasificar residuos y m
 
 ## Quiz interactivo
 
-![Quiz](screenshots/quiz.png)
+![Quiz](screenshots/Quest.png)
